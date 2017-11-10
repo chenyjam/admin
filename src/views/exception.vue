@@ -193,16 +193,25 @@
                         key: 'exce_desc' , 
                         width: 180,
                         render: (h, params) => {
-                            return h('div', ['123', 
+                            /*return h('div', ['<p>123</p>', 
                                 h('Poptip', {
                                     props: {
                                         width: '400',
-                                        content: 'border'
+                                        height: '300',
+                                        content: params.row.exce_desc
                                     }
                                 }, [h('Button', {
-                                }, '修改')])
+                                    props: {
+                                        size: 'small'
+                                    }
+                                }, '...')])
 
-                            ])
+                            ])*/
+                            return (
+                                <tooltip content="这里是提示文字">
+                                    当鼠标经过这段文字时，会显示一个气泡框
+                                </tooltip>
+                            )
                         }
                     },
                     {
@@ -309,6 +318,16 @@
         beforeUpdate: function() {
         },
         computed: {
+            
+        },
+
+        watch: {
+            formInline: {
+                handler(curVal,oldVal){
+　　　　　　　　　　　　console.log(curVal,oldVal)
+　　　　　　　　　　},
+                deep:true
+            }
             
         },
         methods: {
