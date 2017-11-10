@@ -1,4 +1,4 @@
-<style src="../less/public.less" lang="less"></style>
+<style src="../less/public.less" lang="less">1</style>
 <template>
     <div>
         <Form class="form-inline" ref="formInline" :model="formInline" inline>
