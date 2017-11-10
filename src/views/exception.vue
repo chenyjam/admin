@@ -318,7 +318,7 @@
         beforeUpdate: function() {
         },
         computed: {
-            
+            formInline.car_no
         },
 
         watch: {
